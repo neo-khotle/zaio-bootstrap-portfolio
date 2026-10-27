@@ -29,26 +29,26 @@ body {
 /*
  * Header
  */
-/*
-.banner-wrap {
-    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/73334647-ad51-42a9-b07b-93298cc2a8e1/2b0fca4f-c15c-4622-9efc-572c4a408c30/IN-en-20230605-popsignuptwoweeks-perspective_alpha_website_large.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    border-bottom: 8px solid #222;
-    position: relative;
-}
 
-.overlay {
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    background: black;
-    position: absolute;
-    top: 0;
-    opacity: 60%;
-}*/
+.banner-wrap {
+     /* feel free to use your own img  */
+     background-image: url(./assets/banner.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     position: relative;
+     z-index: 1;
+ }
+ .overlay {
+     z-index: -1;
+     height: 100%;
+     width: 100%;
+     background: black;
+     opacity: 50%;
+     position: absolute;
+     top: 0;
+ }
+
 
 .nav-masthead .nav-link {
   color: rgba(255, 255, 255, .5);
