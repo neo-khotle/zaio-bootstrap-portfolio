@@ -75,3 +75,9 @@ body {
 header{
   background: black;
 }
+
+.scrolling {
+    background: black;
+    opacity: 90%;
+    transition: all 0.5s;
+}

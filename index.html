@@ -24,9 +24,8 @@
   </head>
   <body class="bg-light">
 
-<div class="banner-wrap vh-100 text-white">
-  <div class="overlay"></div>
-  <header class="px-5 p-3 text-white fixed-top">
+
+  <header class="px-5 p-3 text-white fixed-top scrolling">
     <div>
       <h3 class="float-md-start text-center">Portfolio</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
@@ -38,12 +37,14 @@
     </div>
   </header>
 
+  <div class="banner-wrap vh-100 vw-100 d-flex align-items-center justify-content-center text-white">
+    <div class="overlay"></div>
 
-  <main class="d-flex flex-column align-items-center justify-content-center h-100">
-    <h1 class="display-1">I am Neo Khotle</h1>
-    <p class="lead">Full Stack Developer</p>
-  </main> 
-</div>
+    <main class="text-center">
+      <h1 class="display-1">I am Neo Khotle</h1>
+      <span class="lead" id="typed"></span>
+    </main> 
+  </div>
 
 <section id="about-us">
   <div class="container p-5">
@@ -59,7 +60,7 @@
                 <p><strong>Name:</strong> Neo Khotle</p>
                 <p><strong>Profile:</strong> Neo Khotle</p>
                 <p><strong>Email:</strong> neo.khotle.nk@gmail.com</p>
-                <p><strong>Skills:</strong> HTML, CSS, BOOTSTRAP, Vanilla JS, Git 
+                <p><strong>Skills:</strong> <!-- HTML, CSS, BOOTSTRAP, Vanilla JS, Git  -->
                 <span class="badge rounded-pill bg-dark">HTML</span>
                 <span class="badge rounded-pill bg-dark">CSS</span>
                 <span class="badge rounded-pill bg-dark">git</span>
@@ -71,8 +72,10 @@
           </div>
           <div class="col-md-6 mt-3">
             <h1 class="text-center text-md-start">About Me</h1>
-            <p class="lead">I'm an aspiring software developer focused on building responsive, user-friendly web applications. I work with HTML, CSS, and JavaScript, developing my skills through hands-on projects in front-end development and responsive web design.
-                  With a background in IT support and online education, I bring strong problem-solving, communication, and adaptability skills to creating intuitive, accessible digital experiences. I'm passionate about learning new technologies, solving real-world problems, and turning ideas into functional solutions.</p>
+            <p class="lead">
+              I'm an aspiring software developer focused on building responsive, user-friendly web applications. I work with HTML, CSS, and JavaScript, developing my skills through hands-on projects in front-end development and responsive web design.
+              With a background in IT support and online education, I bring strong problem-solving, communication, and adaptability skills to creating intuitive, accessible digital experiences. I'm passionate about learning new technologies, solving real-world problems, and turning ideas into functional solutions.
+            </p>
           </div>
         </div>
       </div>
@@ -151,6 +154,24 @@
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
 </section>
+
+<script>
+  window.addEventListener("scroll", ()=> {
+    const header = document.querySelector("header")
+    header.classList.toggle("scrolling", window.scrollY > 0)
+  })
+</script>
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+<script>
+  var typed = new Typed('#typed', {
+    strings: ['Fullstack Developer.', 'AI Engineering Student.', 'English Teacher'],
+    loop: true, 
+    typeSpeed: 75,
+    shuffle: true
+  });
+</script>
 
   </body>
 </html>
